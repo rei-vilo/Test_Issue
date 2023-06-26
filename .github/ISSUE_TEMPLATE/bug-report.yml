@@ -23,16 +23,6 @@ body:
       description: What would you expect to happen after following those instructions?
     validations:
       required: true
-  - type: input
-    id: project-version
-    attributes:
-      label: Arduino IDE version
-      description: |
-        Which version of the Arduino IDE are you using?
-        See **Help > About Arduino IDE** in the Arduino IDE menus (**Arduino IDE > About Arduino IDE** on macOS).
-        This should be the latest [nightly build](https://www.arduino.cc/en/software#nightly-builds).
-    validations:
-      required: true
   - type: dropdown
     id: os
     attributes:
@@ -47,10 +37,68 @@ body:
     validations:
       required: true
   - type: input
-    id: os-version
+    id: ide-name
     attributes:
-      label: Operating system version
-      description: Which version of the operating system are you using on your computer?
+      label: IDE or SDK
+      description: |
+        Which IDE or SDK are you using? 
+    validations:
+      required: true
+  - type: input
+    id: ide-version
+    attributes:
+      label: IDE
+      description: |
+        Which version of the IDE or SDK are you using? 
+    validations:
+      required: true
+  - type: dropdown
+    id: pdls-variant
+    attributes:
+      label: PDLS variant
+      description: Which variant of PDLS are you using?
+      multiple: true
+      options:
+        - PDLS_EXT3_Basic
+        - PDLS_EXT3_Basic_Fast
+        - PDLS_EXT3_Basic_Touch
+        - PDLS_EXT3_Basic_BWRY
+    validations:
+      required: true
+  - type: input
+    id: pdls-version
+    attributes:
+      label: PDLS version
+      description: |
+        Which version of PDLS are you using? 
+    validations:
+      required: true
+  - type: input
+    id: hardware-controller
+    attributes:
+      label: Controller
+      description: Which controller are you using? (e.g. Raspberry Pi Pico RP2040)
+    validations:
+      required: true
+  - type: input
+    id: hardware-extension
+    attributes:
+      label: Extension board
+      description: Which extension board are you using? (e.g. EXT3-1)
+    validations:
+      required: true
+  - type: input
+    id: hardware-creen
+    attributes:
+      label: EPD panel
+      description: Which EPD panel are you using? (e.g. iTC 2.71 BW)
+    validations:
+      required: true
+  - type: input
+    id: hardware-reference
+    attributes:
+      label: Controller
+      description: Which is the exact reference of the EPD panel you are using? (e.g. CE2271CS094)
     validations:
       required: true
   - type: textarea
@@ -66,9 +114,7 @@ body:
       label: Issue checklist
       description: Please double-check that you have done each of the following things before submitting the issue.
       options:
-        - label: I searched for previous reports in [the issue tracker](https://github.com/arduino/arduino-ide/issues?q=)
-          required: true
-        - label: I verified the problem still occurs when using the latest [nightly build](https://www.arduino.cc/en/software#nightly-builds)
+        - label: I searched for previous reports in [the issue tracker](https://github.com/rei-vilo/PDLS_EXT3_Basic/issues?q=)
           required: true
         - label: My report contains all necessary details
           required: true

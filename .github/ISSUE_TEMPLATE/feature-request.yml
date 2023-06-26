@@ -14,38 +14,45 @@ body:
     attributes:
       label: Describe the current behavior
       description: |
-        What is the current behavior of the Arduino IDE in relation to your request?
+        What is the current behavior of PDLS in relation to your request?
         How can we reproduce that behavior?
     validations:
       required: true
-  - type: input
-    id: project-version
-    attributes:
-      label: Arduino IDE version
-      description: |
-        Which version of the Arduino IDE are you using?
-        See **Help > About Arduino IDE** in the Arduino IDE menus (**Arduino IDE > About Arduino IDE** on macOS).
-        This should be the latest [nightly build](https://www.arduino.cc/en/software#nightly-builds).
-    validations:
-      required: true
   - type: dropdown
-    id: os
+    id: pdls-variant
     attributes:
-      label: Operating system
-      description: Which operating system(s) are you using on your computer?
+      label: PDLS variant
+      description: Which variant of PDLS are you using?
       multiple: true
       options:
-        - Windows
-        - Linux
-        - macOS
-        - N/A
+        - PDLS_EXT3_Basic
+        - PDLS_EXT3_Basic_Fast
+        - PDLS_EXT3_Basic_Touch
+        - PDLS_EXT3_Basic_BWRY
     validations:
       required: true
   - type: input
-    id: os-version
+    id: pdls-version
     attributes:
-      label: Operating system version
-      description: Which version of the operating system are you using on your computer?
+      label: PDLS version
+      description: |
+        Which version of PDLS are you using? 
+    validations:
+      required: true
+  - type: input
+    id: ide-name
+    attributes:
+      label: IDE or SDK
+      description: |
+        Which IDE or SDK are you using? 
+    validations:
+      required: true
+  - type: input
+    id: ide-version
+    attributes:
+      label: IDE
+      description: |
+        Which version of the IDE or SDK are you using? 
     validations:
       required: true
   - type: textarea
@@ -61,9 +68,7 @@ body:
       label: Issue checklist
       description: Please double-check that you have done each of the following things before submitting the issue.
       options:
-        - label: I searched for previous requests in [the issue tracker](https://github.com/arduino/arduino-ide/issues?q=)
-          required: true
-        - label: I verified the feature was still missing when using the latest [nightly build](https://www.arduino.cc/en/software#nightly-builds)
+        - label: I searched for previous requests in [the issue tracker](https://github.com/vilo/PDLS_EXT3_Basic/issues?q=)
           required: true
         - label: My request contains all necessary details
           required: true
