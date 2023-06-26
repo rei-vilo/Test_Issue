@@ -36,7 +36,7 @@ body:
     attributes:
       label: PDLS version
       description: |
-        Which version of PDLS are you using? 
+        Which version of PDLS are you using? (e.g. 6.1.1)
     validations:
       required: true
   - type: input
