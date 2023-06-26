@@ -47,7 +47,7 @@ body:
   - type: input
     id: ide-version
     attributes:
-      label: IDE
+      label: IDE or SDK version
       description: |
         Which version of the IDE or SDK are you using? 
     validations:
@@ -80,15 +80,22 @@ body:
       description: Which controller are you using? (e.g. Raspberry Pi Pico RP2040)
     validations:
       required: true
-  - type: input
+
+  - type: dropdown
     id: hardware-extension
     attributes:
       label: Extension board
       description: Which extension board are you using? (e.g. EXT3-1)
+      multiple: true
+      options:
+        - EXT3
+        - EXT3-1
+        - EXT3-1 with EXT3-Touch
+        - Custom
     validations:
       required: true
   - type: input
-    id: hardware-creen
+    id: hardware-screen
     attributes:
       label: EPD panel
       description: Which EPD panel are you using? (e.g. iTC 2.71 BW)
