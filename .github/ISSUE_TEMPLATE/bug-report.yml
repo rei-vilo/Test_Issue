@@ -23,33 +23,12 @@ body:
       description: What would you expect to happen after following those instructions?
     validations:
       required: true
-  - type: dropdown
-    id: os
-    attributes:
-      label: Operating system
-      description: Which operating system(s) are you using on your computer?
-      multiple: true
-      options:
-        - Windows
-        - Linux
-        - macOS
-        - N/A
-    validations:
-      required: true
   - type: input
-    id: ide-name
+    id: ide-name-version
     attributes:
-      label: IDE or SDK
+      label: IDE or SDK name and version
       description: |
-        Which IDE or SDK are you using? 
-    validations:
-      required: true
-  - type: input
-    id: ide-version
-    attributes:
-      label: IDE or SDK version
-      description: |
-        Which version of the IDE or SDK are you using? 
+        Which IDE or SDK are you using? (e.g. Arduino IDE 2.1.0)
     validations:
       required: true
   - type: dropdown
@@ -76,11 +55,10 @@ body:
   - type: input
     id: hardware-controller
     attributes:
-      label: Controller
-      description: Which controller are you using? (e.g. Raspberry Pi Pico RP2040)
+      label: MCU board
+      description: Which MCU board are you using? (e.g. Raspberry Pi Pico RP2040)
     validations:
       required: true
-
   - type: dropdown
     id: hardware-extension
     attributes:
@@ -104,7 +82,7 @@ body:
   - type: input
     id: hardware-reference
     attributes:
-      label: Controller
+      label: EPD panel reference
       description: Which is the exact reference of the EPD panel you are using? (e.g. CE2271CS094)
     validations:
       required: true
