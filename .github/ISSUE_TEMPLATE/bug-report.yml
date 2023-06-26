@@ -76,7 +76,7 @@ body:
     id: hardware-reference
     attributes:
       label: EPD panel reference
-      description: Which is the exact reference of the EPD panel you are using? (e.g. CE2271CS094)
+      description: Which is the exact reference of the EPD panel you are using? The reference is printed on a sticker. (e.g. CE2271CS094)
     validations:
       required: true
   - type: textarea

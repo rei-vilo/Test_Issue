@@ -40,19 +40,11 @@ body:
     validations:
       required: true
   - type: input
-    id: ide-name
+    id: ide-name-version
     attributes:
-      label: IDE or SDK
+      label: IDE or SDK name and version
       description: |
-        Which IDE or SDK are you using? 
-    validations:
-      required: true
-  - type: input
-    id: ide-version
-    attributes:
-      label: IDE
-      description: |
-        Which version of the IDE or SDK are you using? 
+        Which IDE or SDK are you using? (e.g. Arduino IDE 2.1.0)
     validations:
       required: true
   - type: textarea
