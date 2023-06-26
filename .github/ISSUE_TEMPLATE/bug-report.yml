@@ -73,13 +73,6 @@ body:
     validations:
       required: true
   - type: input
-    id: hardware-screen
-    attributes:
-      label: EPD panel
-      description: Which EPD panel are you using? (e.g. iTC 2.71 BW)
-    validations:
-      required: true
-  - type: input
     id: hardware-reference
     attributes:
       label: EPD panel reference
